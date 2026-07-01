@@ -3,22 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="krisho.css">
+    <link rel="stylesheet" href="fristo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
+    <center>
     <header>
         <nav>
-            <b><h1>fristo</h1></b>
+            <h1 >fristo</h1>
             <ul>
-                <li> <a href="">home</a></li>
-                <li> <a href="#">about us</a></li>
-                <li> <a href="#">content</a> </li>
+                <li><a href="#">wishlist</a></li>
+                <li><a href="#">cart</a></li>
+                <li> <a href="#">notification</a> </li>
                 <li> <button type="button"><a href="">language</a></button></li>
+                <li><button  onclick="col()"><i class="fa-solid fa-lightbulb"></i></button></li>
             </ul>
-            <button  onclick="col()"><i class="fa-solid fa-lightbulb"></i></button>
-        </nav>
+            <ul>
+                <li><button  ><a href="#"></a>profile</button></li>
+            </ul>
+        </nav>  
     </header>
+    </center>
+    <div class="companyinfo">
+        <h1>Hello, </h1>
+        <p>welcome to fristo</p>
+        <br>
+   
+        <div class="smallbox">
+        <a href="">
+        <h2>Order history</h2>
+        <p>Manage & View</p>
+        </a>
+        </div>
+        <div class="smallbox">
+        <h2>Messages</h2>
+        <p>Manage & view</p>
+        </div>    
+        <div class="smallbox">
+        <h2>Cart</h2>
+        <p>Manage & View</p>
+        </div>
+        <div class="smallbox">
+        <h2>Profile</h2>
+        <p>Manage & View</p>
+        </div>
+    </div>
+
+    <div class="companyinfo">
+    <h1>Digital bakery</h1>
+    <p>Available produce in your region</p>
     
+        <br>
+        <div class="verysmallbox">rgerg</div> 
+        <div class="verysmallbox">rgerg</div>
+        <div class="verysmallbox">rgerg</div> 
+        <div class="verysmallbox">rgerg</div>
+        <div class="verysmallbox">rgerg</div>
+        <div class="verysmallbox">rgerg</div>
+        <div class="verysmallbox">rgerg</div>
+        <br>
+        <div class="verysmallbox">rgerg</div>
+        <div class="verysmallbox">rgerg</div>
+
+    </div>
+    
+    <center>
+    <footer>
+
+        <div class="companyinfo">   
+        <h1>fruito</h1>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque nostrum, reiciendis harum optio perspiciatis itaque vero quis delectus aliquid iste doloribus! Consectetur commodi unde aliquid soluta fugiat quia quo reiciendis?
+        </div>
+
+
+         <div class="socialIcons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-google-plus"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>  
+
+         <div class="companyinfo2">
+            <h3>Quicklink</h3>
+            <li><a href="">home</a></li>
+            <li><a href="">cake type</a></li>
+            <li><a href="">Join as Baker</a></li>
+            <li><a href="">About Us</a></li>
+        </div>
+        <div class="companyinfo2"> 
+            <h3>categories</h3>
+           <li><a href="">Oragnic Grains</a></li>
+           <li><a href="">Fresh Baked</a></li>
+           <li><a href="">Dairy Products</a></li>
+           <li><a href="">Quality and Taste</a></li>
+        </div>
+
+        <div class="companyinfo3">
+            <h3>about us</h3>
+            <li><a href=""></a><i class="fa-solid fa-location-arrow"></i> Muzaffarnagar, Uttar Pradesh, India</a></li>
+            <li><a href=""></a><i class="fa-solid fa-phone"></i> +91 9999999999</li>
+            <li><a href=""></a><i class="fa-solid fa-envelope"></i> support@gmail.com</li>
+            <br>
+        </div>
+        <br>
+        <div class="bottom-bar">
+        <h4>Lorem ipsum dolor sit amet consectetur . <br> privacy  | Terms  | cookies</h4>
+        </div>
+
+    </footer>
+    </center>
+      
 </body>
+    <script>
+    let isDark = false;
+    function col() {
+        if (isDark) {
+            document.body.style.backgroundColor = "white";
+            document.body.style.color = "black";
+            isDark = false;
+
+        } else {
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "white";
+            isDark = true;
+        }
+    }
+    </script>
 </html>
