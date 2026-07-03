@@ -24,6 +24,12 @@ nav ul li {
     display: inline-flex;
     margin: 8px;
 } 
+nav ul li a {
+    color: #000;
+}
+nav ul li:hover a {
+    color: white;
+}
 nav button{
     font-size: 2vw;
     height: auto;
@@ -144,6 +150,12 @@ img{
     text-align: left;
 
 }
+
+
+a:hover {
+        color: #f18930;
+    }
+/* home1.html */
 .smallbox{
     height: 130px;
     width: 200px;
@@ -160,4 +172,27 @@ img{
     margin: 17px;
     display: inline-block;
     border-radius: 12px;
+}
+/* 
+.footer-content p{
+        width:190px;
+        margin: auto;
+        padding: 7px;
+}
+.footer-content ul{
+    text-align: center;
 } 
+ .social-icons i:hover{
+        color: #f18930;
+    } */
+    /* .bottom-bar{
+        background: #f18930;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+    .bottom-bar p{
+        color: #343434;
+        margin: 0;
+        font-size: 16px;
+    } */

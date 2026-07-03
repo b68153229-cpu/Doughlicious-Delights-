@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+            margin-top: 20px;
+            font-family: cursive, sans-serif;
+        }
+        #d{
+            display: inline-block;
+            text-align: center;
+        }
+        #profile{
+            max-width: 1200px;
+            margin-top: 40px;
+            display: inline-flex;
+            justify-content:centre;
+            gap:25px;
+            align-items: flex-start;
+            flex-wrap:wrap;
+        }
+        @media(max-width: 700px){
+            #profile{
+                flex-direction:column;
+                align-items:center;
+            }
+        }
+        #profile-container{
+            display: inline-block;
+            border: 1px solid #ccc;
+            width: 400px;
+            min-width: 300px;
+            text-align:center; 
+            flex-wrap:wrap-reverse
+        }
+        .wishlist{
+            border: 1px solid black;
+            width: 80%;
+            margin: 10%;
+            text-align:center;
+            display:block;
+            border-radius: 10px;
+        }
+        .profile-info{
+            border: 1px solid black;
+            width: 80%;
+            margin: 10%;
+            text-align:center;
+            display:block;
+            border-radius: 30px;
+        }
+        .language.setting{
+            border: 1px solid black;
+            width: 80%;
+            margin: 10%;
+            text-align:center;
+            display:block;
+            border-radius:30px;
+        }
+        .app-preference{
+            border: 1px solid black;
+            width: 80%;
+            margin: 10%;
+            text-align:center;
+            display:block;
+            border-radius: 30px;
+        }
+        .logout{
+            border: 1px solid black;
+            width: 80%;
+            margin: 10%;
+            text-align:center;
+            display:block;
+            border-radius: 10px;
+        }
+        .delete-account{
+            border: 1px solid black;
+            width: 80%;
+            margin: 10%;
+            text-align:center;
+            display:block;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<center>
+    <h1>My Profile</h1>
+    <p>Manage your profile. </p>
+    <div id="profile">
+    <div id="profile-container">
+      
+            <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+                <div id="d">
+                <h2>My Wishlist</h2>
+                <p>view saved products</p>
+                </div>
+            </div>
+     
+        <div class="profile-info">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture">
+            <br>
+            <h2>Profile Information</h2>
+            <br>
+            <p><strong>Name:</strong> John Doe</p>
+            <br>
+            <p><strong>Email:</strong> john.doe@example.com</p>
+        </div>
+    </div>
+    <div id="profile-container">
+        <div class="language setting">
+            <i class="fa-solid fa-language"></i>
+            <div id="d">
+                <h2>Language Settings</h2>
+                <strong>Select Your Prefered Language</strong>
+            </div>
+        </div>
+        <div class="app-preference">
+            <i class="fa-solid fa-mobile"></i>
+            <div id="d">
+            <h2>Application Preferences</h2>
+            <strong>Device specific settings</strong>
+            </div>
+        </div>
+        <div class="logout">
+            <h2>Logout</h2>
+        </div>
+        <div class="delete-account">
+            <h2>Delete Account</h2>
+        </div>
+    </div>
+    </div>
+</center>
+</body>
+</html>
