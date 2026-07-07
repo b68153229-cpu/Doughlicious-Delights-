@@ -79,18 +79,18 @@
     <div class="login-container">
         <h2>Login</h2>
 
-        <form action="home1.html" >
+        <form onsubmit="login(event)">
             <div class="input-group">
                 <label>Email</label>
-                <input type="email" placeholder="Enter your email" required>
+                <input id="email" type="email" placeholder="Enter your email" required>
             </div>
 
             <div class="input-group">
                 <label>Password</label>
-                <input type="password" placeholder="Enter your password" required>
+                <input id="password" type="password" placeholder="Enter your password" required>
             </div>
 
-            <button type="submit" class="login-btn" >Login</button>
+            <button type="submit" class="login-btn"  >Login</button>
         </form>
 
         <div class="links">
@@ -98,6 +98,37 @@
             <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
         </div>
     </div>
+    </body>
+<script >
+    function login(event) {
+        event.preventDefault();
 
-</body>
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    // const customer = JSON.parse(localStorage.getItem("customer"));
+    const customers = JSON.parse(localStorage.getItem("customers")) || [];
+
+    const customer = customers.find(c =>
+        c.email === email &&
+        c.password === password
+    );
+
+    if (
+        customer &&
+        customer.email === email &&
+        customer.password === password
+    ) {
+        // Save logged-in user
+        localStorage.setItem("loggedInUser", JSON.stringify(customer));
+
+        alert("Login Successful!");
+
+        window.location.href = "home1.html";
+    } else {
+        alert("Invalid Email or Password");
+    }
+
+    }
+</script> 
 </html>

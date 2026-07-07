@@ -81,29 +81,31 @@
 <div class="signup-container">
     <h2>Create Account</h2>
 
-    <form action="home1.html">
+
+    <form onsubmit="register(event)">
         <div class="input-group">
             <label>Full Name</label>
-            <input type="text" placeholder="Enter your name" required>
+            <input id="name" type="text" placeholder="Enter your name" required>
         </div>
 
         <div class="input-group">
             <label>Email</label>
-            <input type="email" placeholder="Enter your email" required>
+            <input id="email" type="email" placeholder="Enter your email" required>
         </div>
 
         <div class="input-group">
             <label>Password</label>
-            <input type="password" placeholder="Create password" required>
+            <input id="password" type="password" placeholder="Create password" required>
         </div>
 
         <div class="input-group">
             <label>Confirm Password</label>
-            <input type="password" placeholder="Confirm password" required>
+            <input id="confirm-password" type="password" placeholder="Confirm password" required>
         </div>
-
-        <button type="submit" class="signup-btn">Sign Up</button>
-    </form>
+        
+        <button class="signup-btn" type="submit">Sign Up</button>
+       </form>
+  
 
     <div class="login-link">
         Already have an account?
@@ -111,5 +113,87 @@
     </div>
 </div>
 
-</body>
+
+</body> 
+   <!-- <script>
+        function register(event){
+
+        event.preventDefault(); -->
+    <!-- 
+        const password =
+            document.getElementById("password").value;
+
+        const confirm =
+            document.getElementById("confirm-password").value;
+
+        if(password !== confirm){
+
+            alert("Passwords do not match");
+
+            return;
+        }
+
+    //     }
+    // </script>
+    // <script > 
+    //        function register(event) {
+
+        const customer = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value,
+            };
+            let customers =
+            JSON.parse(localStorage.getItem("customers")) || [];
+
+            customers.push(customer);
+
+            localStorage.setItem(
+                "customers",
+                JSON.stringify(customers)
+            );
+
+        alert("Registration Successful!");
+
+        window.location.href = "login.html";
+        }
+    </script> --> 
+    <script>  
+    function register(event) {
+
+    event.preventDefault();
+
+    const password = document.getElementById("password").value;
+    const confirm = document.getElementById("confirm-password").value;
+
+    if (password !== confirm) {
+        alert("Passwords do not match");
+        return;
+    }
+
+    const customer = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        password: password
+    };
+
+    let customers = JSON.parse(localStorage.getItem("customers")) || [];
+
+    const exists = customers.find(c => c.email === customer.email);
+
+    if (exists) {
+        alert("Email already registered");
+        return;
+    }
+
+    customers.push(customer);
+
+    localStorage.setItem("customers", JSON.stringify(customers));
+
+    alert("Registration Successful!");
+
+    window.location.href = "login.html";
+    } 
+    </script> 
+
 </html>
