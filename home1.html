@@ -4,79 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="fristo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
-    <center>
-    <header>
-        <nav>
-            <h1 >fristo</h1>
-            <ul>
-                <li><a href="#">wishlist</a></li>
-                <li><a href="#">cart</a></li>
-                <li> <a href="#">notification</a> </li>
-                <li><a href="#">language</a></li>
-
-                <!-- <div id="langMenu" class="hidden">
-                <button onclick="setLanguage('en')">English</button>
-                <button onclick="setLanguage('hi')">हिन्दी</button>
-                </div> -->
-
-                
-                <li><button  onclick="col()"><i class="fa-solid fa-lightbulb"></i></button></li>
-            </ul>
-            <ul>
-                <li><button  ><a href="profile.html">profile</a></button></li>
-            </ul>
-        </nav>  
-    </header>
-    </center>
    
-    <div class="companyinfo">
-        <h1>Hello, </h1>
-        <p>welcome to fristo</p>
-        <br>
-   
-        <div class="smallbox">
-        <a href="">
-        <h2>Order history</h2>
+<!-- <center>  -->
+    <header> 
+        <nav class="navbar">
+             <h1 ><i class="fa-solid fa-cake-candles"></i>fristo</h1> 
+                    <div class="search-box"><input type="text" placeholder="Search Cakes..."></div>
+                    
+              <ul id="menu">
+                    <li><a href="home1.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-heart"></i></a></li> 
+                    <li><a href=""><i class="fa-solid fa-bell"></i></a> </li>
+                    <li><a href=""><i class="fa-solid fa-globe"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-cart-flatbed-suitcase"></i></a></li>
+             </ul> 
+             <div class="sidebar"> 
+                <div class="button" onclick="getDetails()"><i class="fa-solid fa-location-dot"></i></div>
+                <div  class="button" onclick="col()"><i class="fa-solid fa-lightbulb"></i></div>
+                <div class="button"><a href="profile.html"><i class="fa-solid fa-circle-user"></i></a></div>
+                <div class="description" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+             </div>
+        </nav> 
+    </header> 
+<!-- </center> -->
+<div class="welcome">
+     <h1>Hello, </h1> 
+     <p>welcome to fristo</p>
+     <br>
+      <div class="smallbox">
+        <h1>Order history</h1>
+        <a href="order.html">
         <p>Manage & View</p>
         </a>
-        </div>
-        <div class="smallbox">
-        <h2>Messages</h2>
-        <p>Manage & view</p>
-        </div>    
-        <div class="smallbox">
-        <h2>Cart</h2>
-        <p>Manage & View</p>
-        </div>
-        <div class="smallbox">
-        <h2>Profile</h2>
-        <p>Manage & View</p>
-        </div>
-    </div>
+      </div> 
+    <br> 
+</div>
 
+<canvas id="canvas"></canvas>
+
+<div class="content"> 
     <div class="companyinfo">
-    <h1>Digital bakery</h1>
-    <p>Available produce in your region</p>
-    
-        <br>
-        <div class="verysmallbox">rgerg</div> 
-        <div class="verysmallbox">rgerg</div>
-        <div class="verysmallbox">rgerg</div> 
-        <div class="verysmallbox">rgerg</div>
-        <div class="verysmallbox">rgerg</div>
-        <div class="verysmallbox">rgerg</div>
-        <div class="verysmallbox">rgerg</div>
-        <br>
-        <div class="verysmallbox">rgerg</div>
-        <div class="verysmallbox">rgerg</div>
-
-    </div>
-    
-    <center>
+         <h1>Digital bakery</h1>
+          <p>Available produce in your region</p> 
+          <br> 
+          <div class="cake-section">
+             <h1 class="title">Cake</h1>
+              <div class="wrap"> 
+                 <div class="cake-card">
+                    <img src="images/pexels-kawerodriguess-15564375.jpg" >
+                    <h3>chocolate Cake</h3>
+                    <div class="price">250Rs</div>
+                    <a href="" class="btn">Order Now</a>
+                    </div> 
+                <div class="cake-card"> 
+                    <img src="images/pexels-azulandeira-31221182.jpg" alt="">
+                    <h3>velvet Cake</h3>
+                    <div class="price">250Rs</div>
+                    <a href="" class="btn">Order Now</a> 
+                    </div> 
+                <div class="cake-card"> 
+                    <img src="images/pexels-ozrenildo-1291712.jpg" alt=""> 
+                    <h3>fruit Cake</h3> <div class="price">250Rs</div>
+                    <a href="" class="btn">Order Now</a>
+                    </div> 
+                <div class="cake-card"> 
+                    <img src="images/pexels-the-design-lady-746806315-18572876.jpg" alt="">
+                    <h3>butter Cake</h3> 
+                    <div class="price">250Rs</div> 
+                    <a href="" class="btn">Order Now</a>
+                    </div> 
+                <div class="cake-card">
+                    <img src="images/pexels-catscoming-1359319.jpg" >
+                    <h3>sponge Cake</h3>
+                    <div class="price">250Rs</div> 
+                    <a href="" class="btn">Order Now</a>
+                    </div>
+                <div class="cake-card">
+                    <img src="images/pexels-max-w-1673439416-32767704.jpg" alt="">
+                    <h3>cookie Cake</h3> 
+                    <div class="price">250Rs</div> 
+                    <a href="" class="btn">Order Now</a> 
+                    </div> 
+                <div class="cake-card">
+                    <img src="images/pexels-martin-alargent-1165956-32290116.jpg" alt=""> 
+                    <h3>blueberry Cake</h3> 
+                    <div class="price">250Rs</div> 
+                    <a href="" class="btn">Order Now</a> 
+                    </div> 
+            </div> 
+    </div> 
+    <div class="bread-section">
+        <h1 class="title">bread</h1>
+        <div class="wrap">
+            <div class="bread-card"> <img src="images/bread-baguette.jpg" alt=""> <h3>Baguette</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
+            <div class="bread-card"> <img src="images/bread-croissant.jpg" alt=""> <h3>Croissant</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
+            <div class="bread-card"> <img src="images/bread-breadroll.jpg" alt=""> <h3>Bread roll</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
+            <div class="bread-card"> <img src="images/bread-garlicbread.jpg" alt=""> <h3>Garlic bread</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
+            <div class="bread-card"> <img src="images/bread-toast.jpg" alt=""> <h3>Toast</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
+         </div> 
+    </div> 
+    <div class="desert-section"> 
+        <h1 class="title">Other Deserts</h1> 
+        <div class="wrap"> 
+            <div class="desert-card"> <img src="images/pie and tarts.jpg" alt=""> <h3>Pies and Tarts</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
+            <div class="desert-card"> <img src="images/custards and pudding.jpg" alt=""> <h3>Custards and Pudding</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
+            <div class="desert-card"> <img src="images/pastries.jpg" alt=""> <h3>Pastries</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
+            <div class="desert-card"> <img src="images/waffles.jpg" alt=""> <h3>Waffles</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
+            <div class="desert-card"> <img src="images/fruit dessert.jpg" alt=""> <h3>Fruit Dessert</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
+            <div class="desert-card"> <img src="images/maringues.jpg" alt=""> <h3>Meringues</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
+            <div class="desert-card"> <img src="images/cheessecake.jpg" alt=""> <h3>Chessecake</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
+            <div class="desert-card"> <img src="images/muffins.jpg" alt=""> <h3>Muffin</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
+        </div> 
+    </div> 
+    <div class="Beverages-section"> 
+        <h1 class="title">Drinks(available only on site)</h1>
+        <div class="wrap">
+             <div class="beverages-card"> <img src="images/drink-milkshakes.jpg" alt=""> <h3>Milkshakes</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
+             <div class="beverages-card"> <img src="images/drink-smoothies.jpg" alt=""> <h3>Smoothies</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
+             <div class="beverages-card"> <img src="images/drink-mixed drinks.jpg" alt=""> <h3>Mixed drinks</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
+             <div class="beverages-card"> <img src="images/fruit-juice.jpg" alt=""> <h3>fruit juice</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
+             <div class="beverages-card"> <img src="images/drink-coffee.jpg" alt=""> <h3>coffee</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
+             <div class="beverages-card"> <img src="images/drink-mocktail.jpg" alt=""> <h3>Mocktail</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
+        </div> 
+    </div> 
+    <!-- <div class="verysmallbox1">Dietary & Allergen Needs</div> <div class="verysmallbox1">Customization & Packaging</div> --> </div> </div> <center> <footer></footer>
+</div>
+    <!-- <center> -->
     <footer>
 
         <div class="companyinfo">   
@@ -121,11 +178,11 @@
         </div>
 
     </footer>
-    </center>
+    <!-- </center> -->
       
 </body>
     <script>
-    let isDark = false;
+       let isDark = false;
     function col() {
         if (isDark) {
             document.body.style.backgroundColor = "white";
@@ -138,5 +195,53 @@
             isDark = true;
         }
     }
+    function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const icon = document.querySelector(".description i");
+
+    menu.classList.toggle("active");
+
+    if (menu.classList.contains("active")) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+    } else {
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+    }
+}
+
+    // location 
+    function getDetails() { let city = prompt("Enter your city:"); let state = prompt("Enter your state:"); if (city && state) { alert("Submitted!\nCity: " + city + "\nState: " + state); } else { alert("Submission cancelled."); } } 
+    // background
+     const canvas = document.getElementById("canvas"); const ctx = canvas.getContext("2d"); function resize(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+     resize(); window.addEventListener("resize",resize);
+      // --------------------- // Stars // --------------------- 
+      const stars=[]; for(let i=0;i<150;i++){ stars.push({ x:Math.random()*canvas.width, y:Math.random()*canvas.height, r:Math.random()*2+1, alpha:Math.random(),speed:Math.random()*0.02 }); } 
+      // --------------------- // Clouds // --------------------- 
+      const clouds=[]; for(let i=0;i<5;i++){ clouds.push({ x:Math.random()*canvas.width, y:Math.random()*250, speed:0.2+Math.random()*0.3}); } 
+      // --------------------- // Shooting Stars // --------------------- 
+      const shooting=[]; function newShooting(){ shooting.push({ x:Math.random()*canvas.width, y:Math.random()*200, dx:8,dy:4, life:100 }); } setInterval(newShooting,2500);
+       // --------------------- // Particles // --------------------- 
+      const particles=[]; for(let i=0;i<60;i++){ particles.push({ x:Math.random()*canvas.width,y:Math.random()*canvas.height, r:Math.random()*3, dx:(Math.random()-0.5)*0.3, dy:(Math.random()-0.5)*0.3 }); } 
+      // --------------------- // Draw Moon // ---------------------
+      function moon(){ let x=canvas.width-180; let y=120;let g=ctx.createRadialGradient(x,y,20,x,y,90); g.addColorStop(0,"white"); g.addColorStop(1,"rgba(255,255,255,0)"); ctx.fillStyle=g; ctx.beginPath(); ctx.arc(x,y,90,0,Math.PI*2); ctx.fill(); 
+      // ctx.fillStyle="#fff6cc"; // ctx.beginPath(); // ctx.arc(x,y,45,0,Math.PI*2); // ctx.fill(); // ctx.fillStyle="black";
+      ctx.beginPath(); ctx.arc(x+15,y-10,45,0,Math.PI*2);ctx.fill(); }
+       // --------------------- // Draw Cloud // --------------------- 
+      function drawCloud(x,y){ ctx.fillStyle="rgba(255,255,255,.15)"; ctx.beginPath(); ctx.arc(x,y,30,0,Math.PI*2); ctx.arc(x+30,y-15,35,0,Math.PI*2); ctx.arc(x+70,y,30,0,Math.PI*2);ctx.arc(x+40,y+15,30,0,Math.PI*2); ctx.fill(); }
+       // --------------------- // Animation // --------------------- 
+      function animate(){ ctx.clearRect(0,0,canvas.width,canvas.height);
+         // Stars 
+      for(let s of stars){ s.alpha+=s.speed;if(s.alpha>1||s.alpha<0) s.speed*=-1; ctx.fillStyle="rgba(255,255,255,"+s.alpha+")"; ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2); ctx.fill(); }
+       // Moon 
+       moon(); 
+       // Clouds
+      for(let c of clouds){ drawCloud(c.x,c.y); c.x+=c.speed; if(c.x>canvas.width+150) c.x=-150; }
+       // Particles
+      for(let p of particles){ ctx.fillStyle="rgba(255,255,180,.4)"; ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill(); p.x+=p.dx; p.y+=p.dy; if(p.x<0)p.x=canvas.width; if(p.x>canvas.width)p.x=0; if(p.y<0)p.y=canvas.height; if(p.y>canvas.height)p.y=0; } // Shooting Stars 
+      for(let i=shooting.length-1;i>=0;i--){ let s=shooting[i]; ctx.strokeStyle="white";ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(s.x,s.y); ctx.lineTo(s.x-40,s.y-20); ctx.stroke(); s.x+=s.dx; s.y+=s.dy; s.life--; if(s.life<=0) shooting.splice(i,1); }
+      requestAnimationFrame(animate); } animate();
     </script>
 </html>
+      
+  
