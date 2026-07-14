@@ -3,39 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="fristo.css">
+    <link rel="stylesheet" href="Doughlicious-Delights.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Document</title>
-
 </head>
 <body>
   
     <header>
-        <nav>
-            <h1 >fristo</h1>
-            
-                <button class="location" type="submit" onclick="getDetails()"  > <i class="fa-solid fa-search"></i><span>location</span> </button>
-                <button class="location" type="submit"><input type="text" placeholder="search"></button>
-                <ul>
-                <li><a href="home1.html"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href=""><i class="fa-solid fa-heart"></i></a></li>
+        <nav>            
+             <h1 ><i class="fa-solid fa-cake-candles"></i>fristo</h1> 
+                    <div class="search-box"><input type="text" placeholder="Search Cakes..."></div>
+            <ul id="menu">
+                <li><a href="homepage.html"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-heart"></i></a></li> 
                 <li><a href=""><i class="fa-solid fa-bell"></i></a> </li>
                 <li><a href=""><i class="fa-solid fa-globe"></i></a></li>
-                
-                <li><button  onclick="col()"><i class="fa-solid fa-lightbulb"></i></button></li>
-            </ul>
-            <ul>
-                <li><button  ><a href="profile.html"><i class="fa-solid fa-circle-user"></i></a></button></li>
-            </ul>
+                <li><a href=""><i class="fa-solid fa-cart-flatbed-suitcase"></i></a></li>
+            </ul> 
+             <div class="sidebar"> 
+                <div class="button" onclick="getDetails()"><i class="fa-solid fa-location-dot"></i></div>
+                <div  class="button" onclick="col()"><i class="fa-solid fa-lightbulb"></i></div>
+                <div class="button"><a href="profile.html"><i class="fa-solid fa-circle-user"></i></a></div>
+                <div class="description" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+            </div>
+
         </nav>  
     </header>
     
 <center>
+    <canvas id="canvas"></canvas>
     <h1>My Profile</h1>
     <p>Manage your profile. </p>
     <div id="profile">
 
-        <div id="profile-container1">        
+        <div id="profile-container1">
+
             <div class="wishlist">
                 <div class="d"> 
                 <i class="fa-solid fa-heart" ></i> 
@@ -46,7 +48,7 @@
                 </div>
             </div>    
             <div class="profile-info">
-                <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                <img id="profilePic" src="" alt="Profile Picture" height="50%" width="100%">
                 <br>
                 <h2>Profile Information</h2>
                 <br>
@@ -57,6 +59,7 @@
         </div>
 
         <div id="profile-container2">
+
             <div class="language setting">
                 <i class="fa-solid fa-language"></i>
                 <div class="d">
@@ -79,23 +82,23 @@
                 </div>
                 <p id="app-preference-info">Notification: off</p>
             </div>
-            <div>               
-                <button  class="logout" type="button" onclick="logout()">
-                    Logout
-                </button>                    
-            </div>
-                
             <div>
-            <button class="delete-account" type="button" onclick="deleteAccount()">
-                Delete Account
-            </button>
+                <button class="logout" onclick="logout()">logout</button>
+            </div>                
+            <div>
+                <button class="delete-account" type="button" onclick="deleteAccount()">
+                    Delete Account
+                </button>
             </div>
         </div>
         
     </div>
 </center>
-</body>
-<script>
+ </body>
+  <script src="Doughlicious-Delights.js"></script>
+
+
+ <script>
     function logout() {
 
         localStorage.removeItem("loggedInUser");
@@ -122,7 +125,9 @@
 
         document.getElementById("name").textContent = user.name;
         document.getElementById("email").textContent = user.email;
-
+         document.getElementById("profilePic").src =
+        "https://api.dicebear.com/9.x/initials/svg?seed=" +
+        encodeURIComponent(user.name);
     } else {
 
         alert("Please Login First");
@@ -148,4 +153,4 @@
     window.location.href = "signup.html";
 }
 </script>
-</html>
+</html> 

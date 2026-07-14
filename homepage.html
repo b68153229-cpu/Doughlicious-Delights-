@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="fristo.css">
-    <link rel="stylesheet" href="home1.js">
+    <link rel="stylesheet" href="Doughlicious-Delights.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <title>Document</title>
 </head>
@@ -14,14 +13,13 @@
     <header> 
         <nav class="navbar">
              <h1 ><i class="fa-solid fa-cake-candles"></i>fristo</h1> 
-                    <div class="search-box"><input type="text" placeholder="Search Cakes..."></div>
-                    
+                    <div class="search-box"><input type="text" placeholder="Search Cakes,breads,desserts"></div>                    
               <ul id="menu">
                     <li><a href="home1.html"><i class="fa-solid fa-house"></i></a></li>
-                    <li><a href=""><i class="fa-solid fa-heart"></i></a></li> 
-                    <li><a href=""><i class="fa-solid fa-bell"></i></a> </li>
-                    <li><a href=""><i class="fa-solid fa-globe"></i></a></li>
-                    <li><a href=""><i class="fa-solid fa-cart-flatbed-suitcase"></i></a></li>
+                    <li><a href="profile.html"><i class="fa-solid fa-heart"></i></a></li> 
+                    <li><a href="profile.html"><i class="fa-solid fa-bell"></i></a> </li>
+                    <li><a href="profile.html"><i class="fa-solid fa-globe"></i></a></li>
+                    <li><a href="cart.html"><i class="fa-solid fa-cart-flatbed-suitcase"></i></a></li>
              </ul> 
              <div class="sidebar"> 
                 <div class="button" onclick="getDetails()"><i class="fa-solid fa-location-dot"></i></div>
@@ -59,77 +57,96 @@
                     <img src="images/pexels-kawerodriguess-15564375.jpg" >
                     <h3>chocolate Cake</h3>
                     <div class="price">250Rs</div>
-                    <a href="" class="btn">Order Now</a>
+                    <a href="" class="btn" onclick="addToCart('chocolate-cake',250)">Add to cart</a>
                     </div> 
                 <div class="cake-card"> 
                     <img src="images/pexels-azulandeira-31221182.jpg" alt="">
                     <h3>velvet Cake</h3>
                     <div class="price">250Rs</div>
-                    <a href="" class="btn">Order Now</a> 
+                    <a href="" class="btn" onclick="addToCart('velvet-cake',250)">Add to cart</a> 
                     </div> 
                 <div class="cake-card"> 
                     <img src="images/pexels-ozrenildo-1291712.jpg" alt=""> 
                     <h3>fruit Cake</h3> <div class="price">250Rs</div>
-                    <a href="" class="btn">Order Now</a>
+                    <a href="" class="btn" onclick="addToCart('fruit-cake',250)">Add to cart</a>
                     </div> 
                 <div class="cake-card"> 
                     <img src="images/pexels-the-design-lady-746806315-18572876.jpg" alt="">
                     <h3>butter Cake</h3> 
                     <div class="price">250Rs</div> 
-                    <a href="" class="btn">Order Now</a>
+                    <a href="" class="btn" onclick="addToCart('butter-cake',250)">Add to cart</a>
                     </div> 
                 <div class="cake-card">
                     <img src="images/pexels-catscoming-1359319.jpg" >
                     <h3>sponge Cake</h3>
                     <div class="price">250Rs</div> 
-                    <a href="" class="btn">Order Now</a>
+                    <a href="" class="btn" onclick="addToCart('sponge-cake',250)">Add to cart</a>
                     </div>
                 <div class="cake-card">
                     <img src="images/pexels-max-w-1673439416-32767704.jpg" alt="">
                     <h3>cookie Cake</h3> 
                     <div class="price">250Rs</div> 
-                    <a href="" class="btn">Order Now</a> 
+                    <a href="" class="btn" onclick="addToCart('cookie-cake',250)">Add to cart</a> 
                     </div> 
                 <div class="cake-card">
                     <img src="images/pexels-martin-alargent-1165956-32290116.jpg" alt=""> 
                     <h3>blueberry Cake</h3> 
                     <div class="price">250Rs</div> 
-                    <a href="" class="btn">Order Now</a> 
+                    <a href="" class="btn" onclick="addToCart('blueberry-cake',250)">Add to cart</a> 
                     </div> 
             </div> 
     </div> 
     <div class="bread-section">
         <h1 class="title">bread</h1>
         <div class="wrap">
-            <div class="bread-card"> <img src="images/bread-baguette.jpg" alt=""> <h3>Baguette</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
-            <div class="bread-card"> <img src="images/bread-croissant.jpg" alt=""> <h3>Croissant</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
-            <div class="bread-card"> <img src="images/bread-breadroll.jpg" alt=""> <h3>Bread roll</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
-            <div class="bread-card"> <img src="images/bread-garlicbread.jpg" alt=""> <h3>Garlic bread</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
-            <div class="bread-card"> <img src="images/bread-toast.jpg" alt=""> <h3>Toast</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
+            <div class="bread-card"> <img src="images/bread-baguette.jpg" alt=""> <h3>Baguette</h3> <div class="price">250Rs</div>
+             <a class="btn" onclick="addToCart('baguette',250)">Add to cart</a> </div>
+            <div class="bread-card"> <img src="images/bread-croissant.jpg" alt=""> <h3>Croissant</h3> <div class="price">250Rs</div> 
+             <a href="" class="btn" onclick="addToCart('croissant',250)">Add to cart</a> </div> 
+            <div class="bread-card"> <img src="images/bread-breadroll.jpg" alt=""> <h3>Bread roll</h3> <div class="price">250Rs</div>
+             <a href="" class="btn" onclick="addToCart('bread-roll',250)">Add to cart</a> </div> 
+            <div class="bread-card"> <img src="images/bread-garlicbread.jpg" alt=""> <h3>Garlic bread</h3> <div class="price">250Rs</div>
+             <a href="" class="btn" onclick="addToCart('Garlic-bread',250)">Add to cart</a> </div> 
+            <div class="bread-card"> <img src="images/bread-toast.jpg" alt=""> <h3>Toast</h3> <div class="price">250Rs</div> 
+             <a href="" class="btn" onclick="addToCart('Toast',250)">Add to cart</a> </div>
          </div> 
     </div> 
     <div class="desert-section"> 
         <h1 class="title">Other Deserts</h1> 
         <div class="wrap"> 
-            <div class="desert-card"> <img src="images/pie and tarts.jpg" alt=""> <h3>Pies and Tarts</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
-            <div class="desert-card"> <img src="images/custards and pudding.jpg" alt=""> <h3>Custards and Pudding</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
-            <div class="desert-card"> <img src="images/pastries.jpg" alt=""> <h3>Pastries</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
-            <div class="desert-card"> <img src="images/waffles.jpg" alt=""> <h3>Waffles</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
-            <div class="desert-card"> <img src="images/fruit dessert.jpg" alt=""> <h3>Fruit Dessert</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
-            <div class="desert-card"> <img src="images/maringues.jpg" alt=""> <h3>Meringues</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
-            <div class="desert-card"> <img src="images/cheessecake.jpg" alt=""> <h3>Chessecake</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
-            <div class="desert-card"> <img src="images/muffins.jpg" alt=""> <h3>Muffin</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
+            <div class="desert-card"> <img src="images/pie and tarts.jpg" alt=""> <h3>Pies and Tarts</h3> <div class="price">250Rs</div>
+             <a href="" class="btn" onclick="addToCart('pies and tarts',250)">Add to cart</a> </div>
+            <div class="desert-card"> <img src="images/custards and pudding.jpg" alt=""> <h3>Custards and Pudding</h3> <div class="price">250Rs</div>
+             <a href="" class="btn" onclick="addToCart('custards and pudding',250)">Add to cart</a> </div>
+            <div class="desert-card"> <img src="images/pastries.jpg" alt=""> <h3>Pastries</h3> <div class="price">250Rs</div>
+             <a href="" class="btn" onclick="addToCart('Pastries',250)">Add to cart</a> </div> 
+            <div class="desert-card"> <img src="images/waffles.jpg" alt=""> <h3>Waffles</h3> <div class="price">250Rs</div>
+             <a href="" class="btn" onclick="addToCart('Waffles',250)">Add to cart</a> </div>
+            <div class="desert-card"> <img src="images/fruit dessert.jpg" alt=""> <h3>Fruit Dessert</h3> <div class="price">250Rs</div>
+             <a href="" class="btn" onclick="addToCart('Fruit dessert',250)">Add to cart</a> </div> 
+            <div class="desert-card"> <img src="images/maringues.jpg" alt=""> <h3>Meringues</h3> <div class="price">250Rs</div>
+             <a href="" class="btn" onclick="addToCart('Meringues',250)">Add to cart</a> </div>
+            <div class="desert-card"> <img src="images/cheessecake.jpg" alt=""> <h3>Chessecake</h3> <div class="price">250Rs</div>
+             <a href="" class="btn" onclick="addToCart('Cheesecake',250)">Add to cart</a> </div>
+            <div class="desert-card"> <img src="images/muffins.jpg" alt=""> <h3>Muffin</h3> <div class="price">250Rs</div>
+             <a href="" class="btn" onclick="addToCart('Muffin',250)">Add to cart</a> </div> 
         </div> 
     </div> 
     <div class="Beverages-section"> 
         <h1 class="title">Drinks(available only on site)</h1>
         <div class="wrap">
-             <div class="beverages-card"> <img src="images/drink-milkshakes.jpg" alt=""> <h3>Milkshakes</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
-             <div class="beverages-card"> <img src="images/drink-smoothies.jpg" alt=""> <h3>Smoothies</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
-             <div class="beverages-card"> <img src="images/drink-mixed drinks.jpg" alt=""> <h3>Mixed drinks</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
-             <div class="beverages-card"> <img src="images/fruit-juice.jpg" alt=""> <h3>fruit juice</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
-             <div class="beverages-card"> <img src="images/drink-coffee.jpg" alt=""> <h3>coffee</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div>
-             <div class="beverages-card"> <img src="images/drink-mocktail.jpg" alt=""> <h3>Mocktail</h3> <div class="price">250Rs</div> <a href="" class="btn">Order Now</a> </div> 
+             <div class="beverages-card"> <img src="images/drink-milkshakes.jpg" alt=""> <h3>Milkshakes</h3> <div class="price">250Rs</div>
+              <!-- <a href="" class="btn" >Order Now</a>--> </div>  
+             <div class="beverages-card"> <img src="images/drink-smoothies.jpg" alt=""> <h3>Smoothies</h3> <div class="price">250Rs</div>
+              <!-- <a href="" class="btn" >Order Now</a> --></div> 
+             <div class="beverages-card"> <img src="images/drink-mixed drinks.jpg" alt=""> <h3>Mixed drinks</h3> <div class="price">250Rs</div>
+              <!-- <a href="" class="btn" >Order Now</a>--> </div> 
+             <div class="beverages-card" > <img src="images/fruit-juice.jpg" alt=""> <h3>fruit juice</h3> <div class="price">250Rs</div>
+              <!-- <a href="" class="btn" >Order Now</a> --></div> 
+             <div class="beverages-card"> <img src="images/drink-coffee.jpg" alt=""> <h3>coffee</h3> <div class="price">250Rs</div>
+              <!-- <a href="" class="btn" >Order Now</a>--> </div>
+             <div class="beverages-card"> <img src="images/drink-mocktail.jpg" alt=""> <h3>Mocktail</h3> <div class="price">250Rs</div>
+              <!-- <a href="" class="btn" >Order Now</a> --></div> 
         </div> 
     </div> 
     <!-- <div class="verysmallbox1">Dietary & Allergen Needs</div> <div class="verysmallbox1">Customization & Packaging</div> --> </div> </div> <center> <footer></footer>
@@ -182,6 +199,9 @@
     <!-- </center> -->
       
 </body>
+ <script src="Doughlicious-Delights.js"></script>
+ </html>
+
     <!-- <script>
        let isDark = false;
     function col() {

@@ -99,6 +99,7 @@ nav .button{
 nav .description{
     display: none;
 }
+
 /* main content of home page -welcome customer */
 
         .welcome{
@@ -143,7 +144,7 @@ nav .description{
         .btn:hover{
             background:#8B5E3C;
             transform:scale(1.05);
-            }
+        }
 
         .cake-card{
             height: min-content;
@@ -151,7 +152,7 @@ nav .description{
             display: inline-block;
             border: #000 solid 1px;
             margin :15px;
-            background-color:pink ;  
+            background-color:#C68E5A;   
             border-radius: 10px;         
         }
         @media (max-width :768px){
@@ -161,7 +162,7 @@ nav .description{
             }
         }
         .cake-card:hover{
-            transform:translateY(-8px);
+            /* transform:translateY(-8px); */
             box-shadow:0 15px 30px rgba(0,0,0,.2);
         }
         .cake-card img{
@@ -212,7 +213,7 @@ nav .description{
         }
 
 
-/* profile styling */
+/* entry page */
 h1{
     font: 1.8em sans-serif;
     font-family:"Georgia",'Garamond',"Helvetica","serif" ;
@@ -257,164 +258,171 @@ img{
 .box1 p{
     font-size: 70%; 
 }
-.d{
-    display: inline-block;
-    text-align: center;
-    /* align-items: start; */
-}
-#profile{
-    max-width: 1200px;
-    margin-top: 40px;
-    display: inline-flex;
-    justify-content:centre;
-    align-items:flex-start;
-    flex-wrap:wrap;
-}
-@media(max-width: 700px){
-    #profile{
-        flex-direction:column;
-        align-items:center;
-    }
-}
-#profile-container1{
-    display: inline-block;
-    border: 1px solid black;
-    width: 380px;
-    min-width: 300px;
-    text-align:center; 
-    flex-wrap:wrap-reverse;
-    
-}
-.wishlist{
-    border: 1px solid black;
-    width: 80%;
-    margin: 10%;
-    text-align:center;
-    display:block;
-    border-radius: 10px;
-    align-items: start;
-
-}
-.profile-info{
-    border: 1px solid black;
-    width: 80%;
-    margin: 10%;
-    text-align:center;
-    display:block;
-    border-radius: 30px;
-}
-#profile-container2{
-    display: inline-block;
-    border: 1px solid black;
-    width: 480px;
-    min-width: 300px; 
-    flex-wrap:wrap-reverse;
-}
-.language.setting{
-    border: 1px solid black;
-    width: 80%;
-    margin: 10%;
-    text-align:center;
-    display:block;
-    border-radius:30px;
-}
-.app-preference{
-    border: 1px solid black;
-    width: 80%;
-    margin: 10%;
-    text-align:center;
-    display:block;
-    border-radius: 30px;
-}
-.logout{
-    border: 1px solid black;
-    width: 80%;
-    margin: 10%;
-    text-align:center;
-    display:block;
-    border-radius: 10px;
-}
-.delete-account{
-    border: 1px solid black;
-    width: 80%;
-    margin: 10%;
-    text-align:center;
-    display:block;
-    border-radius: 10px;
-}
-/* footer of website       */
-        footer{
-            background-attachment: fixed;
-            background-image: url(https://thfvnext.bing.com/th/id/OIP.iyVkf48azBhpoLQWyEVoiAHaEO?w=319&h=182&c=7&r=0&o=7&cb=thfvnextfalcon2&dpr=1.5&pid=1.7&rm=3);
-            background-repeat: no-repeat;
-            background-size:cover;
-            color: #000;
-
-        }
-        .socialIcons{
-            display: flex;
-            justify-content: center;
-        }
-        .socialIcons a{
-            text-decoration: none;
-            padding:  10px;
-            background-color: white;
-            margin: 10px;
-            border-radius: 50%;
-        }
-        .socialIcons a i{
-            font-size: 2em;
-            color: black;
-            opacity: 0,9;
-        }
-        /* Hover affect on social media icon */
-        .socialIcons a:hover{
-            background-color: #111;
-            transition: 0.5s;
-        }
-        .socialIcons a:hover i{
-            color: white;
-            transition: 0.5s;
-        }
-        .bottom-bar{
-            width: 100%;
-            background: #5C4033;
+/* profile styling */
+        .d{
+            display: inline-block;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 50px;
+            /* align-items: start; */
         }
-        .bottom-bar p{
-            color: #343434;
-            font-size: 16px;
-            padding: 7px;
+        #profile{
+            max-width: 1200px;
+            margin-top: 40px;
+            display: inline-flex;
+            justify-content:centre;
+            align-items:flex-start;
+            flex-wrap:wrap;
         }
-        .companyinfo{
-            padding: 5%;
-            text-align: left;
-            align-items: start;
-        }
-        .companyinfo2{
-            width: 200px;
-            display: inline-block;
-            list-style-type: none;
-            margin: 10px ;
-            text-align: left;
-            align-items: start;
-        }
-
-        .companyinfo3{
-            width: 300px;
-            display: inline-block;
-            list-style-type: none;
-            margin: 10px ;
-            text-align: left;
-            align-items: start;
-        }
-        
-
-        a:hover{
-                color: #f18930;
+        @media(max-width: 700px){
+            #profile{
+                flex-direction:column;
+                align-items:center;
             }
+        }
+        #profile-container1{
+            display: inline-block;
+            border: 1px solid black;
+            width: 380px;
+            min-width: 300px;
+            text-align:center; 
+            flex-wrap:wrap-reverse;
+            
+        }
+        .wishlist{
+            border: 1px solid ;
+            width: 80%;
+            margin: 10%;
+            text-align:center;
+            display:block;
+            border-radius: 10px;
+            align-items: start;
+
+        }
+        .profile-info{
+            border: 1px solid;
+            width: 80%;
+            margin: 10%;
+            padding-top: 10px;
+            text-align:center;
+            display:block;
+            border-radius: 30px;
+        }
+        .profile-info img{
+            height: 40%;
+            width: 60%;
+            border-radius: 30px;
+        }
+        #profile-container2{
+            display: inline-block;
+            border: 1px solid black;
+            width: 480px;
+            min-width: 300px; 
+            flex-wrap:wrap-reverse;
+        }
+        .language.setting{
+            border: 1px solid ;
+            width: 80%;
+            margin: 10%;
+            text-align:center;
+            display:block;
+            border-radius:30px;
+        }
+        .app-preference{
+            border: 1px solid ;
+            width: 80%;
+            margin: 10%;
+            text-align:center;
+            display:block;
+            border-radius: 30px;
+        }
+        .logout{
+            border: 1px solid ;
+            width: 80%;
+            margin: 10%;
+            text-align:center;
+            display:block;
+            border-radius: 10px;
+        }
+        .delete-account{
+            border: 1px solid ;
+            width: 80%;
+            margin: 10%;
+            text-align:center;
+            display:block;
+            border-radius: 10px;
+        }
+/* footer of website       */
+footer{
+    background-attachment: fixed;
+    background-image: url(https://thfvnext.bing.com/th/id/OIP.iyVkf48azBhpoLQWyEVoiAHaEO?w=319&h=182&c=7&r=0&o=7&cb=thfvnextfalcon2&dpr=1.5&pid=1.7&rm=3);
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: #000;
+
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.bottom-bar{
+    width: 100%;
+    background: #5C4033;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+.bottom-bar p{
+    color: #343434;
+    font-size: 16px;
+    padding: 7px;
+}
+.companyinfo{
+    padding: 5%;
+    text-align: left;
+    align-items: start;
+}
+.companyinfo2{
+    width: 200px;
+    display: inline-block;
+    list-style-type: none;
+    margin: 10px ;
+    text-align: left;
+    align-items: start;
+}
+
+.companyinfo3{
+    width: 300px;
+    display: inline-block;
+    list-style-type: none;
+    margin: 10px ;
+    text-align: left;
+    align-items: start;
+}
+
+
+a:hover{
+        color: #f18930;
+    }
         /* home1.html - Home Page 
         .smallbox{
             height: 130px;

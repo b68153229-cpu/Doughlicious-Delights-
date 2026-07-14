@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Document</title>
-    <link rel="stylesheet" href="fristo.css">
+    <link rel="stylesheet" href="Doughlicious-Delights.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -13,17 +14,18 @@
     <header>
         <center>
         <nav>
-            <b><h1>fristo</h1></b>
-            <ul>
+            <h1 ><i class="fa-solid fa-cake-candles"></i>fristo</h1> 
+            <ul id="menu">
                 <li> <a href="home1.html">home</a></li>
                 <li> <a href="#">about us</a></li>
                 <li> <a href="#">content</a> </li>
                 <li> <a href="#">language</a></li>
             </ul>
-            <ul><li>
-                <button  onclick="col()"><i class="fa-solid fa-lightbulb"></i></button>
-            </li></ul>
-    
+            <div class="sidebar">               
+            <div class="button"><a href="profile.html"><i class="fa-solid fa-circle-user"></i></a></div>
+            <div class="description" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+            </div>
+
         </nav>
         </center>
     </header>
@@ -34,6 +36,7 @@
         <h1>cake made with fresh fruits.</h1><br>
         <button><a href="login.html">login</a></button>
         <button><a href="signup.html">signup</a></button>
+        <button><a href="homepage.html">maybe later</a></button>
         
         <br>
         
@@ -93,7 +96,7 @@
     </footer>
     </center>
 </body>
-<script>
+<!-- <script>
     let isDark = false;
     function col() {
         if (isDark) {
@@ -107,5 +110,5 @@
             isDark = true;
         }
     }
-</script>
+</script> -->
 </html>

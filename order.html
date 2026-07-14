@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Order History</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:40px;
+}
+
+.order{
+    border:1px solid #ccc;
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:8px;
+}
+
+.order h3{
+    margin-top:0;
+}
+
+button{
+    padding:8px 12px;
+    margin-top:10px;
+    cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Order History</h1>
+
+<div id="orders"></div>
+
+<button onclick="clearHistory()">Clear Order History</button>
+
+<br><br>
+
+<a href="homepage.html">Continue Shopping</a>
+
+<script>
+
+function displayOrders(){
+
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    let container = document.getElementById("orders");
+
+    container.innerHTML = "";
+
+    if(orders.length === 0){
+        container.innerHTML = "<h3>No orders found.</h3>";
+        return;
+    }
+
+    orders.forEach((order,index)=>{
+
+        let total = 0;
+
+        let html = `
+            <div class="order">
+            <h3>Order #${index+1}</h3>
+            <ul>
+        `;
+
+        order.items.forEach(item=>{
+            total += item.price;
+
+            html += `<li>${item.name} - $${item.price}</li>`;
+        });
+
+        html += `
+            </ul>
+            <strong>Total: $${total}</strong><br><br>
+            <button onclick="deleteOrder(${index})">Delete Order</button>
+            </div>
+        `;
+
+        container.innerHTML += html;
+
+    });
+
+}
+
+function deleteOrder(index){
+
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    orders.splice(index,1);
+
+    localStorage.setItem("orders",JSON.stringify(orders));
+
+    displayOrders();
+
+}
+
+function clearHistory(){
+
+    localStorage.removeItem("orders");
+
+    displayOrders();
+
+}
+
+displayOrders();
+
+</script>
+
+</body>
+</html>

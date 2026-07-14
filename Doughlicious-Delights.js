@@ -1,4 +1,5 @@
-
+// homepage
+// light function
        let isDark = false;
     function col() {
         if (isDark) {
@@ -12,6 +13,7 @@
             isDark = true;
         }
     }
+    
     function toggleMenu() {
     const menu = document.getElementById("menu");
     const icon = document.querySelector(".description i");
@@ -26,6 +28,7 @@
         icon.classList.add("fa-bars");
     }
 }
+
 
     // location 
     function getDetails() { let city = prompt("Enter your city:"); let state = prompt("Enter your state:"); if (city && state) { alert("Submitted!\nCity: " + city + "\nState: " + state); } else { alert("Submission cancelled."); } } 
@@ -59,5 +62,17 @@
       for(let i=shooting.length-1;i>=0;i--){ let s=shooting[i]; ctx.strokeStyle="white";ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(s.x,s.y); ctx.lineTo(s.x-40,s.y-20); ctx.stroke(); s.x+=s.dx; s.y+=s.dy; s.life--; if(s.life<=0) shooting.splice(i,1); }
       requestAnimationFrame(animate); } animate();
 
-      
-  
+
+    //   add to cart
+    function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({
+        name: name,
+        price: price
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(name + " added to cart!");
+    }

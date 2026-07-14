@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 10px;
+            width: 250px;
+        }
+
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        #cartItems {
+            margin-top: 30px;
+            border-top: 2px solid black;
+            padding-top: 20px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+ 
+<h2>Your Cart</h2>
+<ul id="cartItems"></ul> 
+<h3 id="total"></h3>
+<button onclick="clearCart()">Clear Cart</button>
+<button onclick="placeOrder()">order Now</button>
+<br>
+<a href="homepage.html">Continue Shopping</a>
+
+<script>
+function displayCart() {
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let cartItems = document.getElementById("cartItems");
+cartItems.innerHTML = "";
+let total = 0;
+
+if(cart.length === 0){
+    cartItems.innerHTML = "<h3>Your cart is empty.<h3>";
+    document.getElementById("total").innerText = "Total: $0";
+    return;
+}
+cart.forEach((item, index) => {
+
+total += item.price;
+
+let li = document.createElement("li");
+
+li.innerHTML = `
+    ${item.name} - $${item.price}
+    <button onclick="removeItem(${index})">Delete</button>
+`;
+
+cartItems.appendChild(li);
+});
+
+totalElement.textContent = "Total: $" + total;
+}
+
+function removeItem(index){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.splice(index,1);
+
+    localStorage.setItem("cart",JSON.stringify(cart));
+
+    displayCart();
+
+}
+
+function clearCart(){
+
+    localStorage.removeItem("cart");
+
+    displayCart();
+
+}
+
+displayCart();
+// order
+function placeOrder(){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if(cart.length === 0){
+        alert("Your cart is empty.");
+        return;
+    }
+
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    orders.push({
+        date: new Date().toLocaleString(),
+        items: cart
+    });
+
+    localStorage.setItem("orders",JSON.stringify(orders));
+
+    localStorage.removeItem("cart");
+
+    alert("Order placed successfully!");
+
+    window.location.href = "order.html";
+}
+</script>
+</body>
+</html>
